@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间是映射接口的全类名 -->
+<mapper namespace="com.yc.wwt.mapper.UserMapper">
+	<insert id="insertUser" parameterType="User">
+		<selectKey keyColumn="currId" keyProperty="usid" resultType="int" order="BEFORE">
+			select seq_usid.nextval currId from dual
+		</selectKey>
+		insert into userInfo(usid,email,uname,pwd,tel,province,city,area,money,udate,status)
+		values(#{usid},#{email},#{uname},#{pwd},#{tel},#{prov},#{city},#{area},0.0,sysdate,0)
+	</insert>
+	
+	<select id="findUserByUser" parameterType="User" resultType="User">
+		select *from userInfo where email=#{uname} and pwd=#{pwd} or uname=#{uname} and pwd=#{pwd} or tel=#{uname} and pwd=#{pwd}
+	</select>
+	
+	<update id="updateUsid" parameterType="Integer">
+		update userInfo set status=1 where usid=#{usid}
+	</update>
+</mapper>
