@@ -1,5 +1,5 @@
 package com.bso.entity;
 
-public class aaa {
+public class cccccccc {
 
 }
