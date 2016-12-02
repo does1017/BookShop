@@ -1,4 +1,4 @@
-package com.bso.servlet;
+package com.bso.util;
 
 public class aaa {
 

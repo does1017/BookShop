@@ -1,44 +1,16 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta content="all" name="robots" />
-<meta name="author" content="Fisher" />
-<meta name="Copyright"
-	content="Copyright 2007-2008, 版权所有 www.tiandayup.com" />
-<meta name="description" content="reefdesign" />
-<meta name="keywords" content="reefdesign" />
-<title>文轩网</title>
-<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" rev="stylesheet" href="css/style.css"
-		type="text/css" media="all" />
-	<link rel="stylesheet" type="text/css" media="screen"
-		href="css/slider.css">
-
-		<script src="js/jquery-1.7.min.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/tms-0.4.x.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.slider')._TMS({
-					show : 0,
-					pauseOnHover : true,
-					prevBu : false,
-					nextBu : false,
-					playBu : false,
-					duration : 1000,
-					preset : 'fade',
-					pagination : true,
-					pagNums : false,
-					slideshow : 7000,
-					numStatus : true,
-					banners : 'fromRight',
-					waitBannerAnimation : false,
-					progressBar : false
-				})
-			});
-		</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="all" name="robots" />
+	<meta name="author" content="Fisher" />
+	<meta name="Copyright" content="Copyright 2007-2008, 版权所有 www.tiandayup.com" />
+	<meta name="description" content="reefdesign" />
+	<meta name="keywords" content="reefdesign" />
+	<title>文轩网</title>
+	<link rel="shortcut icon" href="favicon.ico" >
+	<link rel="stylesheet" rev="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" rev="stylesheet" href="css/style1.css" type="text/css"  />
 </head>
 
 <body class="main">
@@ -71,21 +43,30 @@
 	</div>
 
 	<center>
-		<div id="slide" class="box-shadow">
-			<div class="slider">
-				<ul class="items">
-					<li><img src="images/a.jpg" alt="" width="800px"
-						height="200px" />
-					<div class="banner">劳于读书，逸于作文。 —— 程端礼&nbsp;</div></li>
-					<li><img src="images/b.jpg" alt="" width="800px"
-						height="200px" />
-					<div class="banner">读书使人心明眼亮。 —— 伏尔泰&nbsp;</div></li>
-					<li><img src="images/c.jpg" alt="" width="800px "
-						height="200px" />
-					<div class="banner">为乐趣而读书。 —— 毛姆&nbsp;</div></li>
+		<div class="demo">
+			<a class="control prev"></a><a class="control next abs"></a><!--自定义按钮，移动端可不写-->
+			<div class="slider"><!--主体结构，请用此类名调用插件，此类名可自定义-->
+				<ul>
+					<li><a href=""><img src="images/a.jpg" alt="" /></a></li>
+					<li><a href=""><img src="images/b.jpg" alt="" /></a></li>
+					<li><a href=""><img src="images/c.jpg" alt="" /></a></li>
+		
 				</ul>
 			</div>
 		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/YuxiSlider.jQuery.min.js"></script>
+		<script>
+		$(".slider").YuxiSlider({
+			width:940, //容器宽度
+			height:393, //容器高度
+			control:$('.control'), //绑定控制按钮
+			during:4000, //间隔4秒自动滑动
+			speed:800, //移动速度0.8秒
+			mousewheel:true, //是否开启鼠标滚轮控制
+			direkey:true //是否开启左右箭头方向控制
+		});
+		</script>
 	</center>
 
 	<div id="divcontent">

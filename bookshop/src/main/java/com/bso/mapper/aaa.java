@@ -1,4 +1,4 @@
-package com.bso.servlet;
+package com.bso.mapper;
 
 public class aaa {
 
