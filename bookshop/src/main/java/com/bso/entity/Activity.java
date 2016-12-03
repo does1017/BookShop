@@ -52,5 +52,19 @@ public class Activity {
 				+ ", tid=" + tid + ", inventory=" + inventory + ", price="
 				+ price + "]";
 	}
+	public Activity(Integer aid, String aname, Integer bid, Integer tid,
+			Integer inventory, Double price) {
+
+		this.aid = aid;
+		this.aname = aname;
+		this.bid = bid;
+		this.tid = tid;
+		this.inventory = inventory;
+		this.price = price;
+	}
+	public Activity() {
+		
+	}
+	
 
 }
