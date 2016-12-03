@@ -24,9 +24,9 @@
 				<td><a href="index.html"><img src="images/logo.gif"
 						width="180" height="40" border="0" /></a></td>
 				<div><td>
-				  <input id="searchBox" type="text" name="textfield" class="inputtable" style="border: 2px solid green"/>
-				  <!-- <img src="images/serchbutton.gif" width="60px" height="30px;" border="0" style="margin-bottom: -4px" /> -->
-				  <input id="searchButton" type="button" value="搜索" onclick="search('key')"/>
+				  <input id="searchBox" type="text" name="textfield" class="inputtable" style="border: 2px solid #70A114" placeholder="300万种图书随你挑"  />&nbsp;&nbsp;
+				  <input id="searchButton" type="button" value="搜索" onclick="search('key')" />
+				  <br /><span style="color:#B0B0B0">热门搜索：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>
 				</td></div>
 				<td style="text-align: right"><img src="images/cart.gif"
 					width="26" height="23" style="margin-bottom: -4px" />&nbsp; <a
@@ -38,19 +38,7 @@
 		</table>
 	
 	</div>
-	<!-- <div id="divsearch">
-		<table width="100%" border="0" cellspacing="0">
-			<tr>
-				<td style="text-align: right; padding-right: 220px">Search <input
-					id="searchBox" type="text" name="textfield" class="inputtable" />
-					<button id="searchBox" type="submit">搜索</button> <input name="searchbutton" type="image" src="images/serchbutton.gif" style=" margin-bottom:-4px"/>
-					<a href="page/search.html"> <img src="images/serchbutton.gif"
-						border="0" style="margin-bottom: -4px" />
-				</a>
-				</td>
-			</tr>
-		</table>
-	</div> -->
+
 	<div id="divmenu">
 	<ul>
 		<li><a href="index.html">首页</a> <a href="page/product_list.html">科学技术</a></li>
@@ -221,5 +209,16 @@
 			</tr>
 		</table>
 	</div>
+	<script type="text/javascript">
+			
+		$("#searchBox").click(function(){
+			$(this).attr("placeholder","");
+		})
+		$("#searchBox").blur(function(){
+			$(this).attr("placeholder","300万种图书随你挑");
+		})
+		
+		
+	</script>
 </body>
 </html>

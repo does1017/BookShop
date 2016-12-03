@@ -81,6 +81,11 @@ width:100%;
 padding:10px 50px 10px 135px;
 }
 
+
+.headtable a{
+	cursor:pointer;
+}
+
 #divmenu{
 	width:100%;
 	border-top-width: 2px;
@@ -144,7 +149,10 @@ padding:10px 50px 10px 135px;
 	margin-left:-4px;
 	display:inline-block;
 	height: 30px;
-	background-color: green;
+	width:50px;
+	font-family: 微软雅黑;
+	color:#fff;
+	background-color: #70A114;
 }
 
 #divad{
