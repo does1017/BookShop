@@ -37,5 +37,15 @@ public class UserComment {
 		return "UserComment [ucid=" + ucid + ", usid=" + usid + ", bid=" + bid
 				+ ", content=" + content + "]";
 	}
+	public UserComment(Integer ucid, Integer usid, Integer bid, String content) {
+
+		this.ucid = ucid;
+		this.usid = usid;
+		this.bid = bid;
+		this.content = content;
+	}
+	public UserComment() {
+		
+	}
 
 }

@@ -45,5 +45,17 @@ public class Orders {
 				+ total_price + ", status=" + status + ", create_time="
 				+ create_time + "]";
 	}
+	public Orders(Integer orid, Integer usid, Double total_price,
+			Integer status, String create_time) {
+
+		this.orid = orid;
+		this.usid = usid;
+		this.total_price = total_price;
+		this.status = status;
+		this.create_time = create_time;
+	}
+	public Orders() {
+	
+	}
 
 }

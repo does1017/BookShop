@@ -95,5 +95,25 @@ public class BookInfo {
 				+ ", status=" + status + ", inventory=" + inventory + ", temp="
 				+ temp + ", flag=" + flag + "]";
 	}
+	public BookInfo(Integer bid, String bname, String author, String publisher,
+			Integer tid, String intro, String image, Double price,
+			Integer status, Integer inventory, String temp, String flag) {
+
+		this.bid = bid;
+		this.bname = bname;
+		this.author = author;
+		this.publisher = publisher;
+		this.tid = tid;
+		this.intro = intro;
+		this.image = image;
+		this.price = price;
+		this.status = status;
+		this.inventory = inventory;
+		this.temp = temp;
+		this.flag = flag;
+	}
+	public BookInfo() {
+	
+	}
 
 }

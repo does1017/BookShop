@@ -43,5 +43,17 @@ public class RoleInfo {
 		return "RoleInfo [rid=" + rid + ", rname=" + rname + ", pwd=" + pwd
 				+ ", status=" + status + ", authority=" + authority + "]";
 	}
+	public RoleInfo(Integer rid, String rname, String pwd, Integer status,
+			String authority) {
+
+		this.rid = rid;
+		this.rname = rname;
+		this.pwd = pwd;
+		this.status = status;
+		this.authority = authority;
+	}
+	public RoleInfo() {
+	
+	}
 	
 }

@@ -52,5 +52,18 @@ public class OrderInfo {
 				+ ", orid=" + orid + ", bookNum=" + bookNum + ", price="
 				+ price + "]";
 	}
+	public OrderInfo(Integer oriid, Integer bid, Integer usid, Integer orid,
+			Integer bookNum, Double price) {
+
+		this.oriid = oriid;
+		this.bid = bid;
+		this.usid = usid;
+		this.orid = orid;
+		this.bookNum = bookNum;
+		this.price = price;
+	}
+	public OrderInfo() {
+		
+	}
 
 }
