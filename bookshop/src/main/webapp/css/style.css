@@ -78,12 +78,17 @@ width:100%;
 }
 
 .headtable td{
-padding:10px 50px 25px 135px;
+padding:10px 50px 10px 135px;
+}
+
+
+.headtable a{
+	cursor:pointer;
 }
 
 #divmenu{
 	width:100%;
-	border-top-width: 4px;
+	border-top-width: 2px;
 	border-top-style: solid;
 	border-top-color: #82B211;
 	background-color:#1C3F09;
@@ -91,6 +96,13 @@ padding:10px 50px 25px 135px;
 	padding:10px 0px 10px 0px;
 	font-size:14px;
 	/*background-image:url(../images/menubg.gif);*/
+}
+#divmenu li {
+	display:inline-block;
+	
+}
+#divmenu li a{
+	padding:10px 20px;
 }
 
 #divmenu a{
@@ -125,6 +137,22 @@ padding:10px 50px 25px 135px;
 	padding:5px 0px 5px 0px;
 	color:#FFFFFF;
 	font-weight:bold;
+}
+
+#searchBox{
+	height: 24px;
+	width: 300px;
+	border: 0px ;
+	
+}
+#searchButton{
+	margin-left:-4px;
+	display:inline-block;
+	height: 30px;
+	width:50px;
+	font-family: 微软雅黑;
+	color:#fff;
+	background-color: #70A114;
 }
 
 #divad{
