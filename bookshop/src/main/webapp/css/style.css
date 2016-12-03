@@ -151,7 +151,7 @@ MARGIN-LEFT: auto;
 }
 
 .listtitle{
-    padding:5px 0px 5px 5px;
+    padding:35px 0px 5px 5px;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: #CCCCCC;
@@ -160,11 +160,12 @@ MARGIN-LEFT: auto;
 	color:#1C3F09;
 }
 
-.listtd{
+.listtd {
     padding:5px 0px 5px 30px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #CCCCCC;
+	border-bottom-color: #ccccc;
+	color:#999;
 }
 
 .listcontent{
