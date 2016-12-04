@@ -1,5 +1,9 @@
 package com.bso.entity;
-
+/**
+ * 用户评论信息
+ * @author Administrator
+ *
+ */
 public class UserComment {
 
 	private Integer ucid;//用户评论id

@@ -1,5 +1,9 @@
 package com.bso.entity;
-
+/**
+ * 管理员信息
+ * @author Administrator
+ *
+ */
 public class RoleInfo {
 
 	private Integer rid;//管理员id

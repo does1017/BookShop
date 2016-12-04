@@ -1,5 +1,9 @@
 package com.bso.entity;
-
+/**
+ * 书籍信息
+ * @author Administrator
+ *
+ */
 public class BookInfo {
 	
 	private Integer bid;//书籍id

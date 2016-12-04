@@ -1,17 +1,22 @@
 package com.bso.entity;
-
+/**
+ * 用户信息
+ * @author Administrator
+ *
+ */
 public class User {
-	private Integer usid;
-	private String uname;
-	private String pwd;
-	private String sex;
-	private String email;
-	private String tel;
-	private String addr;
-	private String question;
-	private String answer;
-	private String temp;
-	private String flag;
+	
+	private Integer usid;//用户编码
+	private String uname;//用户名
+	private String pwd;//密码
+	private String sex;//性别
+	private String email;//邮箱
+	private String tel;//电话
+	private String addr;//发货
+	private String question;//密保问题
+	private String answer;//密保答案
+	private String temp;//备用字段
+	private String flag;//备用字段
 
 	public User() {
 		super();

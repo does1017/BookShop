@@ -1,5 +1,9 @@
 package com.bso.entity;
-
+/**
+ 书籍类型
+ * @author Administrator
+ *
+ */
 public class BookType {
 	
 	private Integer tid;//书籍类型编号

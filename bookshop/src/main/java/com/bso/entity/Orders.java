@@ -1,5 +1,9 @@
 package com.bso.entity;
-
+/**
+ * 管理订单信息
+ * @author Administrator
+ *
+ */
 public class Orders {
 
 	private Integer orid;//订单编号

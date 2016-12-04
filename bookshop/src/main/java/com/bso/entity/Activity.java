@@ -1,5 +1,9 @@
 package com.bso.entity;
-
+/**
+ * 活动
+ * @author Administrator
+ *
+ */
 public class Activity {
 
 	private Integer aid;//活动id
