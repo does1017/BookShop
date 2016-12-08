@@ -25,7 +25,7 @@
 						width="180" height="40" border="0" /></a></td>
 				<div><td>
 				  <input id="searchBox" type="text" name="textfield" class="inputtable" style="border: 2px solid #70A114" placeholder="300万种图书随你挑"  />&nbsp;&nbsp;
-				  <input id="searchButton" type="button" value="搜索" onclick="search('key')" />
+				  <input id="searchButton" type="button" value="搜索"  />
 				  <br /><span style="color:#B0B0B0">热门搜索：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>
 				</td></div>
 				<td style="text-align: right"><img src="images/cart.gif"
@@ -33,8 +33,6 @@
 					href="page/cart.html">购物车</a> | <a href="#">帮助中心</a> | <a
 					href="page/login.html">我的帐户</a> | <a href="page/register.html">新用户注册</a></td>
 			</tr>
-			
-			
 		</table>
 	
 	</div>
@@ -209,16 +207,7 @@
 			</tr>
 		</table>
 	</div>
-	<script type="text/javascript">
-			
-		$("#searchBox").click(function(){
-			$(this).attr("placeholder","");
-		})
-		$("#searchBox").blur(function(){
-			$(this).attr("placeholder","300万种图书随你挑");
-		})
-		
-		
-	</script>
+	<script src="js/index.js"></script>
+
 </body>
 </html>

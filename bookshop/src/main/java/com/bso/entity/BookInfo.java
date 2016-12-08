@@ -10,15 +10,16 @@ public class BookInfo {
 	private String bname;//书名
 	private String author;//作者
 	private String publisher;//出版社
-	private Integer tid;//书籍类型
+	private BookType bookType;//书籍类型
 	private String intro;//书籍简介
 	private String image;//图片地址
 	private Double price;//书籍价格
-	private  Integer status;//上下架
+	private Integer status;//上下架
 	private Integer inventory;//库存
 	private String temp;//备用字段
 	private String flag;//备用字段
 	
+
 	public Integer getBid() {
 		return bid;
 	}
@@ -43,11 +44,11 @@ public class BookInfo {
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
-	public Integer getTid() {
-		return tid;
+	public BookType getBookType() {
+		return bookType;
 	}
-	public void setTid(Integer tid) {
-		this.tid = tid;
+	public void setBookType(BookType bookType) {
+		this.bookType = bookType;
 	}
 	public String getIntro() {
 		return intro;
@@ -94,30 +95,11 @@ public class BookInfo {
 	@Override
 	public String toString() {
 		return "BookInfo [bid=" + bid + ", bname=" + bname + ", author="
-				+ author + ", publisher=" + publisher + ", tid=" + tid
-				+ ", intro=" + intro + ", image=" + image + ", price=" + price
-				+ ", status=" + status + ", inventory=" + inventory + ", temp="
-				+ temp + ", flag=" + flag + "]";
+				+ author + ", publisher=" + publisher + ", bookType="
+				+ bookType + ", intro=" + intro + ", image=" + image
+				+ ", price=" + price + ", status=" + status + ", inventory="
+				+ inventory + ", temp=" + temp + ", flag=" + flag + "]";
 	}
-	public BookInfo(Integer bid, String bname, String author, String publisher,
-			Integer tid, String intro, String image, Double price,
-			Integer status, Integer inventory, String temp, String flag) {
-
-		this.bid = bid;
-		this.bname = bname;
-		this.author = author;
-		this.publisher = publisher;
-		this.tid = tid;
-		this.intro = intro;
-		this.image = image;
-		this.price = price;
-		this.status = status;
-		this.inventory = inventory;
-		this.temp = temp;
-		this.flag = flag;
-	}
-	public BookInfo() {
 	
-	}
 
 }

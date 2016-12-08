@@ -11,6 +11,8 @@ public class BookType {
 	private String tname;//类型名
 	private Integer status;//状态
 	
+	
+	
 	public Integer getTid() {
 		return tid;
 	}
@@ -42,17 +44,8 @@ public class BookType {
 				+ ", tname=" + tname + ", status=" + status + "]";
 	}
 	
-	public BookType(Integer tid, Integer tid_parent, String tname,
-			Integer status) {
-		this.tid = tid;
-		this.tid_parent = tid_parent;
-		this.tname = tname;
-		this.status = status;
-	}
+
 	
-	public BookType() {
-	
-	}
-	
+
 	
 }

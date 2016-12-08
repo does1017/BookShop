@@ -23,7 +23,7 @@
         http://www.springframework.org/schema/websocket/spring-websocket.xsd">
         
     <!-- 只处理控制分发层的bean -->
-   <context:component-scan base-package="com.yc.wwt" use-default-filters="false">
+   <context:component-scan base-package="com.bso" use-default-filters="false">
        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
    </context:component-scan>
 	
@@ -32,15 +32,15 @@
     -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/page/"/>
-        <property name="suffix" value=".jsp"/>
+        <property name="suffix" value=".html"/>
     </bean>
     
-     <websocket:handlers>
+<!--      <websocket:handlers>
         <websocket:mapping path="/websocket/my" handler="myWebSocket"/>
         <websocket:handshake-interceptors>
         	<bean class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"/>
         </websocket:handshake-interceptors>
-    </websocket:handlers>
+    </websocket:handlers> -->
 
     <!-- 静态资源不处理 -->
     <mvc:default-servlet-handler/>
