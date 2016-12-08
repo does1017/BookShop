@@ -362,51 +362,22 @@ padding:1px;
     margin: 1px;
 }
 
-/* .pagination a, .pagination a:visited{ 
-    padding: 5px;
-    border: 1px solid #9aafe5;
-    text-decoration: none;
-    color: #2e6ab1;
-} 
+a:hover{ text-decoration:none;}
+.pagination{padding: 15px 20px;text-align: left;color: #ccc;text-align:center;}
+.pagination a{display: inline-block;color: #428bca;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.pagination a:hover{text-decoration: none;border: 1px solid #428bca;}
+.pagination span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+.pagination span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
 
-.pagination a:hover, .pagination a:active{ 
-    border: 1px solid #2b66a5;
-    color: #000;
-    background-color: lightyellow;
-}  */
-.pagination a:link{ 
-    padding: 5px;
-    border: 1px solid #9aafe5;
-    text-decoration: none;
-    color: #2e6ab1;
-} 
-.pagination a:hover{ 
-    padding: 5px;
-    border: 1px solid #ff8040;
-    text-decoration: none;
-    color: #ff8040;
-} 
-/* .pagination a:active{ 
-    padding: 5px;
-    border: 1px solid #ff8040;
-    text-decoration: none;
-    color: #ff8040;
-}  */
-/* .pagination a:visited{ 
-    padding: 5px;
-    border: 1px solid #ff8040;
-    text-decoration: none;
-    color: #ff8040;
-}  */
-.pagination li.currentpage{ 
+/* .pagination li.currentpage{ 
 font-weight: bold;
 padding: 5px; 
 border: 1px solid navy;
 background-color: #2e6ab1;
 color: #FFF;
-} 
+}  */
 
-.pagination li.disablepage{ 
+/* .pagination li.disablepage{ 
     font-weight: bold;
     padding: 5px;
 } 
@@ -414,9 +385,9 @@ color: #FFF;
 .pagination li.nextpage{ 
     font-weight: bold;
     padding: 5px;
-} 
+}  */
 
-/*��ҳ*/ 
+ 
 
 
 

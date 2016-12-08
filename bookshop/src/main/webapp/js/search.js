@@ -1,17 +1,29 @@
-var page=1;
-var rows=5;
+var totalPage;//总页数
+var page=1;//页数
+var rows=8;//每页显示数据量
 $(function(){
 	//初始化search.html页面
 	findBookInfoByPage();
+	
+	//生成页码
+	$(".pagination").createPage({
+	    pageCount:totalPage,
+	    current:1,
+	    backFn:function(p){
+	        page=p;
+	        $("#findBook").html('');
+	        findBookInfoByPage();
+	    }
+	});
 })
 
 //分页查询书籍信息
 function findBookInfoByPage(){
 	$.post("search/findAllByPage",{page:page,rows:rows},function(data){
-		/*console.log(data);*/
 		//显示总记录数和分页数据
-		$("#total").text(data.total);
-		$("#pageSize").text(data.pageSize);
+		$("#total").text(data.total);//总记录数
+		$("#pageSize").text(rows);//每页的数据量
+		totalPage=data.totalPage;//总页数
 		
 		//搜索的书籍信息
 		$.each(data.rows,function(index,item){
@@ -26,21 +38,23 @@ function findBookInfoByPage(){
 	                 '<a href="page/cart.html"><img src="images/buy.gif" width="91" height="27" border="0" style="margin-bottom:-8px"/></a></td></tr></table>'
 			);
 		});
-
-		/*					var li="";
-		for(var i=1;i<10;i++){
-			li=li+'<li><a href="javascript:currentPage()" class="current">'+i+'</a></li>';
-		}
-		//上一页，下一页
-		$(".disablepage").next(li);*/
-
+		
 	},"json");	
 }
-//生成页码
+
+
+
+
+
+
+
+
+/*//生成页码
 for(var i=0 ; i<10 ; i++){
     var lis = $('<li><a href="javascript:void(0)" class="current">'+(i+1)+'</a></li>');
     $('.nextpage').before(lis);
 }
+
 //上一页
 function prepage(){
 	page--;
@@ -54,19 +68,9 @@ function nextpage(){
 	findBookInfoByPage();
 }
 
-/*function currentPage(){
-	alert($(this).html());
-}*/
 //当前页
 $(".current").click(function(){
 	page=$(this).html();
 	$("#findBook").html('');
 	findBookInfoByPage();	
-})
-//当前页
-/*$('li').on('click','a',function(){
-	page=$(this).html();
-	$("#findBook").html('');
-	findBookInfoByPage();
-	alert(page);
-})	*/
+})*/

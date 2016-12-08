@@ -19,8 +19,7 @@ public class BookInfoHandler {
 	@ResponseBody
 	@RequestMapping(value="/findAllByPage",method=RequestMethod.POST)
 	public PaginationBean listBooks(String page,String rows){
-		System.out.println(page+"====="+rows);
-		LogManager.getLogger().debug("请求list被filmHandler.listFilm()处理");
+		LogManager.getLogger().debug("请求findAllByPage被BookInfoHandler.listBooks()处理");
 		return bookInfoService.listBooks(page,rows);
 	}
 	
