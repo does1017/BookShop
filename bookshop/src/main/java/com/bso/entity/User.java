@@ -1,6 +1,11 @@
 package com.bso.entity;
-
+/**
+ * 用户信息
+ * @author Administrator
+ *
+ */
 public class User {
+
 	private Integer usid;
 	private String uname;
 	private String pwd;
@@ -13,6 +18,7 @@ public class User {
 	private String temp;
 	private String flag;
 	private Integer status;
+
 
 	public User() {
 		super();

@@ -19,27 +19,27 @@
         http://www.springframework.org/schema/websocket
         http://www.springframework.org/schema/websocket/spring-websocket.xsd">
 
-	<!-- 只处理控制分发层的bean -->
-	<context:component-scan base-package="com.bso"
-		use-default-filters="false">
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Controller" />
-	</context:component-scan>
 
-	<!-- 配制视图处理器 组装响应视图： 如：返回视图名为success, 组装成 /page/success.jsp -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/page/" />
-		<property name="suffix" value=".html" />
-	</bean>
 
-	<!-- <websocket:handlers>
-		<websocket:mapping path="/websocket/my" handler="myWebSocket" />
-		<websocket:handshake-interceptors>
-			<bean
-				class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor" />
-		</websocket:handshake-interceptors>
-	</websocket:handlers> -->
+    <!-- 只处理控制分发层的bean -->
+   <context:component-scan base-package="com.bso" use-default-filters="false">
+       <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+   </context:component-scan>
+	
+    <!--  配制视图处理器 
+    	组装响应视图：  如：返回视图名为success, 组装成 /page/success.jsp
+    -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/page/"/>
+        <property name="suffix" value=".html"/>
+    </bean>
+    
+<!--      <websocket:handlers>
+        <websocket:mapping path="/websocket/my" handler="myWebSocket"/>
+        <websocket:handshake-interceptors>
+        	<bean class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"/>
+        </websocket:handshake-interceptors>
+    </websocket:handlers> -->
 
 	<!-- 静态资源不处理 -->
 	<mvc:default-servlet-handler />

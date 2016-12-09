@@ -61,14 +61,22 @@ display : inline;
 
 .bookname{
 font-size:16px;
-color:#194105;
+font-weight:bold;
+color:#0000ff;
 text-align:left;
 margin-bottom:5px;
 display : inline;
 }
 
-
-
+.authorInfo{
+	font-size:12px;
+	color:red;
+}
+.bookPrice{
+	font-size:14px;
+	font-weight:bold;
+	color:red;	
+}
 #divhead{
 width:100%;
 }
@@ -146,7 +154,8 @@ padding:10px 50px 10px 135px;
 	
 }
 #searchButton{
-	margin-left:-9px;
+	cursor:pointer;
+	margin-left:-4px;
 	display:inline-block;
 	height: 30px;
 	width:50px;
@@ -351,32 +360,13 @@ padding:1px;
     margin: 1px;
 }
 
-.pagination a, .pagination a:visited{ 
-    padding: 5px;
-    border: 1px solid #9aafe5;
-    text-decoration: none;
-    color: #2e6ab1;
-} 
+a:hover{ text-decoration:none;}
+.pagination{padding: 15px 20px;text-align: left;color: #ccc;text-align:center;}
+.pagination a{display: inline-block;color: #428bca;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.pagination a:hover{text-decoration: none;border: 1px solid #428bca;}
+.pagination span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+.pagination span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
 
-.pagination a:hover, .pagination a:active{ 
-    border: 1px solid #2b66a5;
-    color: #000;
-    background-color: lightyellow;
-} 
-
-.pagination li.currentpage{ 
-font-weight: bold;
-padding: 5px; 
-border: 1px solid navy;
-background-color: #2e6ab1;
-color: #FFF;
-} 
-
-.pagination li.disablepage{ 
-padding: 5px;
-border: 1px solid #929292;
-color: #929292;
-} 
 
 .pagination li.nextpage{ 
     font-weight: bold;

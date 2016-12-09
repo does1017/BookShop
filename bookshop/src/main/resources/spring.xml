@@ -42,6 +42,7 @@
 	    <property name="dataSource" ref="dataSource"/> <!-- 数据源 -->
 	    <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/> <!-- mybatis映射文件 -->
 	    <property name="typeAliasesPackage" value="com.bso.entity"/><!-- 实体类的别名 -->
+
 	</bean>
 	
 	<!-- 配制mybatis映射接口的代理实现类 ：bean的名字与映射接口名的首字母小写一样 -->
