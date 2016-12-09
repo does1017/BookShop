@@ -7,7 +7,7 @@
     </Appenders>
     <Loggers>
         <!-- 指定包的日志输出级别 -->
-        <Logger name="com.yc.wwt" level="debug"/>
+        <Logger name="com.bso" level="debug"/>
         <!--  总日志输出级别 -->
         <Root level="error">
             <AppenderRef ref="STDOUT"/>

@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bso</groupId>
-  <artifactId>bookshop</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-	
-	
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bso</groupId>
+	<artifactId>bookshop</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.12</junit.version>
@@ -29,7 +29,7 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- 日志处理jar包 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -50,8 +50,14 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 			<scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
+
 		<!-- spring 整合 数据访问操作的包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -59,7 +65,7 @@
 			<version>${spring.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<!-- spring测试框包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -74,7 +80,7 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson.version}</version>
 			<scope>runtime</scope>
-		</dependency>			
+		</dependency>
 
 		<!-- spring与mybatis的适配包 -->
 		<dependency>
@@ -83,7 +89,7 @@
 			<version>${mybatis.spring.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<!-- oracle数据库驱动包 -->
 		<dependency>
 			<groupId>com.hynnet</groupId>
@@ -97,14 +103,20 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<!-- 数据源框架包 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
 			<version>${dbcp.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
+
 		<!-- mybatis的框架包 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -126,29 +138,86 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-		
+
+		<!-- redis的依赖包坐标 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+			<scope>runtime</scope>
+		</dependency><!-- redis的依赖包坐标 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- spring-redis的整合依赖包 -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>1.7.5.RELEASE</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis.caches</groupId>
+			<artifactId>mybatis-ehcache</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
 			<version>${mail.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>${spring.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-websocket</artifactId>
 			<version>${spring.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
 	</dependencies>
-  <build>
-    <finalName>bookshop</finalName>
-  </build>
+	<build>
+		<finalName>bookshop</finalName>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<profiles>
+		<profile>
+			<id>jdk-1.8</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>1.8</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>1.8</maven.compiler.source>
+				<maven.compiler.target>1.8</maven.compiler.target>
+				<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+			</properties>
+		</profile>
+	</profiles>
 </project>

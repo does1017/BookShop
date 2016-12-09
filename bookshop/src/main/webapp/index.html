@@ -23,33 +23,37 @@
 			<tr>
 				<td><a href="index.html"><img src="images/logo.gif"
 						width="180" height="40" border="0" /></a></td>
-				<div><td>
-				  <input id="searchBox" type="text" name="textfield" class="inputtable" style="border: 2px solid #70A114" placeholder="300万种图书随你挑"  />&nbsp;&nbsp;
-				  <input id="searchButton" type="button" value="搜索" onclick="search('key')" />
-				  <br /><span style="color:#B0B0B0">热门搜索：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>
-				</td></div>
+				<div>
+					<td>
+					<input id="searchBox" type="text" name="textfield"
+						class="inputtable" style="border: 2px solid #70A114"
+						placeholder="300万种图书随你挑" />
+					<input id="searchButton" type="button" value="搜索" onclick="search('key')" /> <br />
+					<span style="color: #B0B0B0">热门搜索：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>基督山伯爵</a>
+					</td>
+				</div>
 				<td style="text-align: right"><img src="images/cart.gif"
 					width="26" height="23" style="margin-bottom: -4px" />&nbsp; <a
-					href="page/cart.html">购物车</a> | <a href="#">帮助中心</a> | <a
+					href="page/cart.html">购物车</a> | <a href="#">帮助中心</a> | <a id="currentUser"
 					href="page/login.html">我的帐户</a> | <a href="page/register.html">新用户注册</a></td>
 			</tr>
-			
-			
+
+
 		</table>
-	
+
 	</div>
 
 	<div id="divmenu">
-	<ul>
-		<li><a href="index.html">首页</a> <a href="page/product_list.html">科学技术</a></li>
-		<li><a href="page/product_list.html">文学小说</a> </li>
-		<li><a href="page/product_list.html">人文社科</a></li>
-		<li> <a href="page/product_list.html">艺术设计</a> </li>
-		<li> <a href="page/product_list.html">经管励志</a> </li>
-		<li> <a href="page/product_list.html">军事历史</a> </li>
-		 <li><a href="page/product_list.html" style="color: #FFFF00">全部商品目录</a></li>
-		 
-		 </ul>
+		<ul>
+			<li><a href="index.html">首页</a> <a href="page/product_list.html">科学技术</a></li>
+			<li><a href="page/product_list.html">文学小说</a></li>
+			<li><a href="page/product_list.html">人文社科</a></li>
+			<li><a href="page/product_list.html">艺术设计</a></li>
+			<li><a href="page/product_list.html">经管励志</a></li>
+			<li><a href="page/product_list.html">军事历史</a></li>
+			<li><a href="page/product_list.html" style="color: #FFFF00">全部商品目录</a></li>
+
+		</ul>
 	</div>
 
 	<center>
@@ -210,15 +214,25 @@
 		</table>
 	</div>
 	<script type="text/javascript">
-			
-		$("#searchBox").click(function(){
-			$(this).attr("placeholder","");
+		$("#searchBox").click(function() {
+			$(this).attr("placeholder", "");
 		})
-		$("#searchBox").blur(function(){
-			$(this).attr("placeholder","300万种图书随你挑");
+		$("#searchBox").blur(function() {
+			$(this).attr("placeholder", "300万种图书随你挑");
 		})
 		
-		
+		$(function(){
+			$.post("UserServlet",{op:"getLoginInfo"},function(data){
+				if(data==""||data==null){
+					alert("亲，请先登录");
+					window.location="page/login.html";
+					//window.navigate="../login.html";
+					 //location.herf="../reg.html";
+				}else{
+					$("#currentUser").text("当前用户："+data.uname);
+				}	
+			},"json");
+		});
 	</script>
 </body>
 </html>

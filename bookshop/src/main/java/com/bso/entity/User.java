@@ -12,6 +12,7 @@ public class User {
 	private String answer;
 	private String temp;
 	private String flag;
+	private Integer status;
 
 	public User() {
 		super();
@@ -19,7 +20,7 @@ public class User {
 
 	public User(Integer usid, String uname, String pwd, String sex,
 			String email, String tel, String addr, String question,
-			String answer, String temp, String flag) {
+			String answer, String temp, String flag, Integer status) {
 		super();
 		this.usid = usid;
 		this.uname = uname;
@@ -32,6 +33,7 @@ public class User {
 		this.answer = answer;
 		this.temp = temp;
 		this.flag = flag;
+		this.status = status;
 	}
 
 	public Integer getUsid() {
@@ -121,13 +123,21 @@ public class User {
 	public void setFlag(String flag) {
 		this.flag = flag;
 	}
+	
+	public Integer getStatus() {
+		return status;
+	}
 
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
 		return "User [usid=" + usid + ", uname=" + uname + ", pwd=" + pwd
 				+ ", sex=" + sex + ", email=" + email + ", tel=" + tel
 				+ ", addr=" + addr + ", question=" + question + ", answer="
-				+ answer + ", temp=" + temp + ", flag=" + flag + "]";
+				+ answer + ", temp=" + temp + ", flag=" + flag + ", status="
+				+ status + "]";
 	}
 
 }

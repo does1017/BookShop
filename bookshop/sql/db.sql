@@ -10,16 +10,17 @@ drop table userInfo;
 --用户信息表 userInfo
 create table userInfo(
    usid  int primary key, --用户id
-   uname varchar2(100) unique,   --姓名             
+   uname varchar2(100) unique not null,   --姓名             
    pwd  varchar2(100),  --密码         
-   sex  char(2),    --性别         
+   sex  char(1)  check(sex in(0,1) ),    --性别         
    email varchar2(100) unique, --邮箱              
    tel   varchar2(15), --联系方式          
    addr varchar2(200), --发货地址           
    question varchar2(100), --密保问题         
    answer varchar2(100), --密保答案 
+   status int, --状态(0.未激活  1.正常帐号
    temp varchar2(200),  --备用字段
-   flag varchar2(1000)  --备用字段            
+   flag varchar2(500)  --备用字段            
    
 );
 
